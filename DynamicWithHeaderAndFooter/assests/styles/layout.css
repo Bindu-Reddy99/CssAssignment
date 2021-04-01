@@ -1,0 +1,120 @@
+body,html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: "/images/download.jpg";
+}
+.main-head {
+    grid-area: header;
+    background-color: aquamarine;
+    height: 100px;
+    text-align: center;
+    text-justify: inter-cluster;
+    padding: 10px;
+    font-family: Snell Roundhand, cursive;
+    font-size: large;
+    color: deeppink;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .content {
+    grid-area: content;
+    height:480px;
+    padding: 15px;
+    background-color: burlywood;
+    
+    
+    opacity: .95;
+  }
+  .main-nav {
+    grid-area: nav;
+    height:500px;
+    padding: 5px;
+    background-color: crimson;
+  }
+  .side {
+    grid-area: sidebar;
+    height: 240px;
+    padding: 5px;
+    text-align: center;
+    font-size: medium;
+    background-color: darkgrey;
+  }
+  .ad {
+    grid-area: ad;
+    height: 240px;
+    padding: 5px;
+    text-align: center;
+    font-size: medium;
+    background-color: darkseagreen;
+  }
+  .main-footer {
+    grid-area: footer;
+    height: 100px;
+    text-align: center;
+    padding: 25px;
+    background-color: blueviolet;
+  }
+  .wrapper {
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "sidebar"
+      "ad"
+      "footer";
+  }
+  @media (min-width: 500px) {
+    .wrapper {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "sidebar content"
+        "ad      footer";
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 700px) {
+    .wrapper {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "nav    content sidebar"
+        "nav    content ad"
+        "footer footer  footer"
+     }
+     nav ul {
+       flex-direction: column;
+     }
+    }
+    .sidebar {
+        height: 500px;
+      grid-area: nav;
+        height:500px;
+        padding: 5px;
+        background-color: rgb(247, 118, 143);
+       
+      }
+      
+      .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #3a3939;
+        display: block;
+      }
+      
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+      
+     
+      
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
