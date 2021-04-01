@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create four equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+        height: 900px; /* Should be removed. Only for demonstration */
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center;"> Four Equal Columns</h2>
+
+    <div class="row">
+      <div class="column" style="background-color: rgb(160, 238, 16)">
+        <h2>Column 1</h2>
+        <p>
+          Your first instinct might be to float the primary column to the right,
+          but that will place it to the right of the main content. What we need
+          to do is add some positioning. Fortunately we don’t need to add a lot.
+        </p>
+      </div>
+      <div class="column" style="background-color: rgb(20, 158, 212)">
+        <h2>Column 2</h2>
+        <p>
+          Your first instinct might be to float the primary column to the right,
+          but that will place it to the right of the main content. What we need
+          to do is add some positioning. Fortunately we don’t need to add a
+          lot..
+        </p>
+      </div>
+      <div class="column" style="background-color: rgb(216, 30, 139)">
+        <h2>Column 3</h2>
+        <p>
+          Your first instinct might be to float the primary column to the right,
+          but that will place it to the right of the main content. What we need
+          to do is add some positioning. Fortunately we don’t need to add a lot.
+        </p>
+      </div>
+      <div class="column" style="background-color: rgb(236, 114, 13)">
+        <h2>Column 4</h2>
+        <p>
+          Your first instinct might be to float the primary column to the right,
+          but that will place it to the right of the main content. What we need
+          to do is add some positioning. Fortunately we don’t need to add a lot.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
